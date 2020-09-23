@@ -1,0 +1,587 @@
+VERSION 5.00
+Begin VB.PropertyPage ppTabTabs 
+   Caption         =   "Tabs"
+   ClientHeight    =   4170
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5490
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   4170
+   ScaleWidth      =   5490
+   Begin VB.CheckBox chTabVisible 
+      Height          =   255
+      Left            =   1680
+      TabIndex        =   6
+      Top             =   2340
+      Value           =   1  'Checked
+      Width           =   675
+   End
+   Begin VB.TextBox txtTag 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   8
+      Top             =   3060
+      Width           =   2685
+   End
+   Begin VB.TextBox txtTollTip 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   7
+      Top             =   2700
+      Width           =   2685
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "Remove"
+      Height          =   315
+      Left            =   3420
+      TabIndex        =   10
+      Top             =   3420
+      Width           =   915
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "Select"
+      Height          =   315
+      Left            =   2460
+      TabIndex        =   9
+      Top             =   3420
+      Width           =   915
+   End
+   Begin VB.TextBox txtTabCnt 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   540
+      TabIndex        =   0
+      Text            =   "0"
+      Top             =   480
+      Width           =   975
+   End
+   Begin VB.CommandButton buttInc 
+      Caption         =   ">"
+      Height          =   315
+      Left            =   3060
+      TabIndex        =   3
+      Top             =   1260
+      Width           =   255
+   End
+   Begin VB.CommandButton buttDec 
+      Caption         =   "<"
+      Height          =   315
+      Left            =   2760
+      TabIndex        =   2
+      Top             =   1260
+      Width           =   255
+   End
+   Begin VB.CheckBox chTabEnabled 
+      Height          =   255
+      Left            =   1680
+      TabIndex        =   5
+      Top             =   1980
+      Value           =   1  'Checked
+      Width           =   675
+   End
+   Begin VB.TextBox txtTabCaption 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   4
+      Top             =   1620
+      Width           =   2685
+   End
+   Begin VB.TextBox txtActiveTab 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1680
+      TabIndex        =   1
+      Text            =   "0"
+      Top             =   1260
+      Width           =   975
+   End
+   Begin VB.Image Image9 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":0000
+      Top             =   2340
+      Width           =   240
+   End
+   Begin VB.Label Label9 
+      Caption         =   "Visible:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   19
+      Top             =   2340
+      Width           =   1215
+   End
+   Begin VB.Label Label8 
+      Caption         =   "Tag:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   18
+      Top             =   3060
+      Width           =   2475
+   End
+   Begin VB.Image Image8 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":0062
+      Top             =   3060
+      Width           =   240
+   End
+   Begin VB.Image Image7 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":00C4
+      Top             =   1260
+      Width           =   240
+   End
+   Begin VB.Label Label7 
+      Caption         =   "Index:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   17
+      Top             =   1260
+      Width           =   1635
+   End
+   Begin VB.Image Image5 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":0126
+      Top             =   2700
+      Width           =   240
+   End
+   Begin VB.Label Label6 
+      Caption         =   "ToolTip:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   16
+      Top             =   2700
+      Width           =   2475
+   End
+   Begin VB.Image Image6 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabTabs.pgx":0188
+      Top             =   240
+      Width           =   240
+   End
+   Begin VB.Label Label5 
+      Caption         =   "Tab count:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   15
+      Top             =   240
+      Width           =   1455
+   End
+   Begin VB.Image imgTabIcon 
+      Appearance      =   0  'Flat
+      BorderStyle     =   1  'Fixed Single
+      Height          =   375
+      Left            =   1680
+      Top             =   3420
+      Width           =   375
+   End
+   Begin VB.Label Label4 
+      Caption         =   "Enabled:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   14
+      Top             =   1980
+      Width           =   1215
+   End
+   Begin VB.Image Image4 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":0263
+      Top             =   1980
+      Width           =   240
+   End
+   Begin VB.Label Label3 
+      Caption         =   "Icon:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   13
+      Top             =   3420
+      Width           =   2475
+   End
+   Begin VB.Image Image3 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":02C5
+      Top             =   3420
+      Width           =   240
+   End
+   Begin VB.Label Label2 
+      Caption         =   "Caption:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   12
+      Top             =   1620
+      Width           =   2475
+   End
+   Begin VB.Image Image2 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabTabs.pgx":0327
+      Top             =   1620
+      Width           =   240
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Active tab:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   11
+      Top             =   900
+      Width           =   1455
+   End
+   Begin VB.Image Image1 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabTabs.pgx":0389
+      Top             =   900
+      Width           =   240
+   End
+End
+Attribute VB_Name = "ppTabTabs"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+Private mProTab As ProTabCTL
+
+Private strCaptions() As String
+Private strToolTip() As String
+Private imgIcons() As StdPicture
+Private bEnbl() As Boolean
+Private bVis() As Boolean
+Private vTags() As Variant
+Private selIndex As Integer
+Private mCount As Integer
+'
+Private Sub buttDec_Click()
+    strCaptions(selIndex) = txtTabCaption.Text
+    If chTabEnabled.Value = 1 Then bEnbl(selIndex) = True Else bEnbl(selIndex) = False
+    strToolTip(selIndex) = txtTollTip.Text
+    vTags(selIndex) = txtTag.Text
+    
+    If Val(txtActiveTab.Text) > 0 Then txtActiveTab.Text = Val(txtActiveTab.Text) - 1
+End Sub
+
+Private Sub buttInc_Click()
+    strCaptions(selIndex) = txtTabCaption.Text
+    If chTabEnabled.Value = 1 Then bEnbl(selIndex) = True Else bEnbl(selIndex) = False
+    strToolTip(selIndex) = txtTollTip.Text
+    vTags(selIndex) = txtTag.Text
+    
+    If Val(txtActiveTab.Text) < Val(txtTabCnt.Text) - 1 Then txtActiveTab.Text = Val(txtActiveTab.Text) + 1
+End Sub
+
+
+Private Sub chTabEnabled_Click()
+    If chTabEnabled.Value = 1 Then bEnbl(selIndex) = True Else bEnbl(selIndex) = False
+    Changed = True
+End Sub
+
+Private Sub chTabVisible_Click()
+    If chTabVisible.Value = 1 Then bVis(selIndex) = True Else bVis(selIndex) = False
+    Changed = True
+End Sub
+
+Private Sub Command1_Click()
+    Dim sTmp As String
+    sTmp = ShowFileOpenDialog(GetActiveWindow(), , "Image Files (*.jpg;*.gif;*.bmp;*.ico)|*.jpg;*.gif;*.bmp;*.ico|All Files|*.*|")
+    If sTmp <> "" Then
+        Set imgTabIcon.Picture = LoadPicture(sTmp)
+        Set imgIcons(selIndex) = LoadPicture(sTmp)
+        Changed = True
+    End If
+End Sub
+
+Private Sub Command2_Click()
+    Set imgTabIcon.Picture = Nothing
+    Set imgIcons(selIndex) = Nothing
+    Changed = True
+End Sub
+
+
+
+
+
+Private Sub PropertyPage_ApplyChanges()
+    Dim i As Integer
+    'freezeRedraw = False
+    txtTabCnt_LostFocus
+    If mProTab.TabCount <> Val(txtTabCnt.Text) Then mProTab.TabCount = Val(txtTabCnt.Text)
+    'MsgBox mCount - 1
+    For i = 0 To Val(txtTabCnt.Text) - 1
+        mProTab.TabCaption(i) = strCaptions(i)
+        mProTab.TabEnabled(i) = bEnbl(i)
+        mProTab.TabVisible(i) = bVis(i)
+        Set mProTab.TabIcon(i) = imgIcons(i)
+        mProTab.TabToolTip(i) = strToolTip(i)
+        mProTab.TabTag(i) = vTags(i)
+        'MsgBox strCaptions(i) & vbCrLf & i
+        'MsgBox bE nbl(i)
+    Next i
+    mProTab.ActiveTab = selIndex
+    Changed = False
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    If Not mProTab Is Nothing Then Exit Sub
+    If TypeOf SelectedControls(0) Is ProTabCTL Then
+        If mProTab Is Nothing Then
+            GoTo LoadProperties
+        End If
+    End If
+    Exit Sub
+LoadProperties:
+    Dim i As Integer
+    mCount = 0
+    'If mCount > 0 Then Exit Sub
+   ' freezeRedraw = True
+    Set mProTab = SelectedControls(0)
+    mCount = mProTab.TabCount
+    ReDim strCaptions(mCount - 1)
+    ReDim strToolTip(mCount - 1)
+    ReDim imgIcons(mCount - 1)
+    ReDim bEnbl(mCount - 1)
+    ReDim vTags(mCount - 1)
+    ReDim bVis(mCount - 1)
+    
+    selIndex = mProTab.ActiveTab
+    For i = 0 To mCount - 1
+        strCaptions(i) = mProTab.TabCaption(i)
+        'strToolTip (i)
+        Set imgIcons(i) = mProTab.TabIcon(i)
+        bEnbl(i) = mProTab.TabEnabled(i)
+        bVis(i) = mProTab.TabVisible(i)
+        strToolTip(i) = mProTab.TabToolTip(i)
+        vTags(i) = mProTab.TabTag(i)
+    Next i
+    txtTabCnt.Text = mCount
+    txtActiveTab.Text = selIndex
+    txtTabCaption.Text = strCaptions(selIndex)
+    txtTag.Text = vTags(selIndex)
+    If bEnbl(selIndex) = True Then chTabEnabled.Value = 1 Else chTabEnabled.Value = 0
+    If bVis(selIndex) = True Then chTabVisible.Value = 1 Else chTabVisible.Value = 0
+    Set imgTabIcon.Picture = imgIcons(selIndex)
+    
+    Changed = False
+End Sub
+
+
+
+Private Sub txtActiveTab_Change()
+    
+    
+    txtActiveTab.Text = Val(txtActiveTab.Text)
+    txtActiveTab.SelLength = Len(txtActiveTab.Text)
+    If Val(txtActiveTab.Text) < 0 Then
+        txtActiveTab.Text = 0
+        txtActiveTab.SelStart = 0
+        txtActiveTab.SelLength = Len(txtActiveTab.Text)
+    ElseIf Val(txtActiveTab.Text) > Val(txtTabCnt.Text) - 1 Then
+        txtActiveTab.SelStart = 0
+        txtActiveTab.SelLength = Len(txtActiveTab.Text)
+        txtActiveTab.Text = Val(txtTabCnt.Text) - 1
+    End If
+    '
+    selIndex = Val(txtActiveTab.Text)
+    txtActiveTab.Text = selIndex
+    txtTabCaption.Text = strCaptions(selIndex)
+    txtTollTip.Text = strToolTip(selIndex)
+    txtTag.Text = vTags(selIndex)
+    
+    If bEnbl(selIndex) = True Then chTabEnabled.Value = 1 Else chTabEnabled.Value = 0
+    If bVis(selIndex) = True Then chTabVisible.Value = 1 Else chTabVisible.Value = 0
+    Set imgTabIcon.Picture = imgIcons(selIndex)
+    Changed = True
+    
+    'MsgBox ""
+End Sub
+
+Private Sub txtTabCaption_Change()
+    strCaptions(selIndex) = txtTabCaption.Text
+    Changed = True
+End Sub
+
+Private Sub txtTabCnt_Change()
+    txtTabCnt.Text = Val(txtTabCnt.Text)
+    txtTabCnt.SelLength = Len(txtTabCnt.Text)
+    If Val(txtTabCnt.Text) < 1 Then
+        txtTabCnt.Text = 1
+        txtTabCnt.SelStart = 0
+        txtTabCnt.SelLength = Len(txtTabCnt.Text)
+    ElseIf Val(txtTabCnt.Text) > 500 Then
+        txtTabCnt.SelStart = 0
+        txtTabCnt.SelLength = Len(txtTabCnt.Text)
+        txtTabCnt.Text = 500
+    End If
+    'txtTabCnt_LostFocus
+    Changed = True
+End Sub
+
+Private Sub txtTabCnt_LostFocus()
+   ' If PropertyPage.Caption <> "General" Then Exit Sub
+    Dim strCaptionsTMP() As String
+    Dim strToolTipTMP() As String
+    Dim imgIconsTMP() As StdPicture
+    Dim bEnblTMP() As Boolean
+    Dim bVisTMP() As Boolean
+    Dim vTagsTMP() As Variant
+    Dim i As Integer, mTabCNT1 As Integer
+    '
+    ReDim strCaptionsTMP(UBound(strCaptions))
+    ReDim strToolTipTMP(UBound(strToolTip))
+    ReDim imgIconsTMP(UBound(imgIcons))
+    ReDim bEnblTMP(UBound(bEnbl))
+    ReDim bVisTMP(UBound(bVis))
+    ReDim vTagsTMP(UBound(vTags))
+    '
+    For i = 0 To UBound(strCaptions)
+        strCaptionsTMP(i) = strCaptions(i)
+        strToolTipTMP(i) = strToolTip(i)
+        Set imgIconsTMP(i) = imgIcons(i)
+        bEnblTMP(i) = bEnbl(i)
+        bVisTMP(i) = bVis(i)
+        vTagsTMP(i) = vTags(i)
+        'free memory
+        strCaptions(i) = ""
+        Set imgIcons(i) = Nothing
+        'bEnbl(i) = Nothing
+    Next i
+    '
+    mTabCNT1 = UBound(strCaptions)
+    mCount = Val(txtTabCnt.Text)
+    ReDim strCaptions(mCount - 1)
+    ReDim strToolTip(mCount - 1)
+    ReDim imgIcons(mCount - 1)
+    ReDim bEnbl(mCount - 1)
+    ReDim bVis(mCount - 1)
+    ReDim vTags(mCount - 1)
+    '
+    For i = 0 To mCount - 1
+        If i <= mTabCNT1 Then
+            strCaptions(i) = strCaptionsTMP(i)
+            Set imgIcons(i) = imgIconsTMP(i)
+            strToolTip(i) = strToolTipTMP(i)
+            bEnbl(i) = bEnblTMP(i)
+            bVis(i) = bVisTMP(i)
+            vTags(i) = vTagsTMP(i)
+            'MsgBox
+        Else
+            strCaptions(i) = "Tab " & i + 1
+            Set imgIcons(i) = Nothing
+            strToolTip(i) = ""
+            bEnbl(i) = True
+            bVis(i) = True
+            vTags(i) = ""
+        End If
+    Next i
+    '
+    If Val(txtActiveTab.Text) > mCount - 1 Then txtActiveTab.Text = mCount - 1
+End Sub
+
+Private Sub txtTag_Change()
+    vTags(selIndex) = txtTag.Text
+    Changed = True
+End Sub
+
+Private Sub txtTollTip_Change()
+    strToolTip(selIndex) = txtTollTip.Text
+   ' MsgBox strToolTip(selIndex)
+    Changed = True
+End Sub

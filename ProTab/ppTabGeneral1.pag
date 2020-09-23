@@ -1,0 +1,703 @@
+VERSION 5.00
+Begin VB.PropertyPage ppTabGeneral 
+   Caption         =   "General"
+   ClientHeight    =   4035
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   6165
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   4035
+   ScaleWidth      =   6165
+   Begin VB.ComboBox cmbAppearance 
+      Height          =   315
+      Left            =   540
+      Style           =   2  'Dropdown List
+      TabIndex        =   0
+      Top             =   480
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbTTip 
+      Height          =   315
+      Left            =   3300
+      Style           =   2  'Dropdown List
+      TabIndex        =   3
+      Top             =   1140
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbColor 
+      Height          =   315
+      Left            =   3300
+      Style           =   2  'Dropdown List
+      TabIndex        =   1
+      Top             =   480
+      Width           =   1935
+   End
+   Begin VB.TextBox txtIcWid 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   4380
+      TabIndex        =   10
+      Top             =   3240
+      Width           =   500
+   End
+   Begin VB.TextBox txtIcHeig 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   4380
+      TabIndex        =   12
+      Top             =   3600
+      Width           =   500
+   End
+   Begin VB.TextBox txtTabHeigA 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1560
+      TabIndex        =   9
+      Top             =   3600
+      Width           =   500
+   End
+   Begin VB.TextBox txtTabHeigN 
+      Appearance      =   0  'Flat
+      Height          =   285
+      Left            =   1560
+      TabIndex        =   8
+      Top             =   3240
+      Width           =   500
+   End
+   Begin VB.ComboBox cmbAlignVert 
+      Height          =   315
+      Left            =   3300
+      Style           =   2  'Dropdown List
+      TabIndex        =   7
+      Top             =   2460
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbAlignHor 
+      Height          =   315
+      Left            =   540
+      Style           =   2  'Dropdown List
+      TabIndex        =   6
+      Top             =   2460
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbStyleNormal 
+      Height          =   315
+      Left            =   540
+      Style           =   2  'Dropdown List
+      TabIndex        =   4
+      Top             =   1800
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbStyleActive 
+      Height          =   315
+      Left            =   3300
+      Style           =   2  'Dropdown List
+      TabIndex        =   5
+      Top             =   1800
+      Width           =   1935
+   End
+   Begin VB.ComboBox cmbOrientation 
+      Height          =   315
+      Left            =   540
+      Style           =   2  'Dropdown List
+      TabIndex        =   2
+      Top             =   1140
+      Width           =   1935
+   End
+   Begin VB.Label Label14 
+      Caption         =   "Appearance:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   25
+      Top             =   240
+      Width           =   1815
+   End
+   Begin VB.Image Image14 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabGeneral1.pgx":0000
+      Top             =   240
+      Width           =   240
+   End
+   Begin VB.Image Image13 
+      Height          =   240
+      Left            =   2940
+      Picture         =   "ppTabGeneral1.pgx":00DB
+      Top             =   240
+      Width           =   240
+   End
+   Begin VB.Label Label13 
+      Caption         =   "Color scheme:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   3240
+      TabIndex        =   24
+      Top             =   240
+      Width           =   1815
+   End
+   Begin VB.Label Label12 
+      Caption         =   "ToolTip style:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   3240
+      TabIndex        =   23
+      Top             =   900
+      Width           =   1815
+   End
+   Begin VB.Image Image12 
+      Height          =   240
+      Left            =   2940
+      Picture         =   "ppTabGeneral1.pgx":01B6
+      Top             =   900
+      Width           =   240
+   End
+   Begin VB.Label Label11 
+      Caption         =   "Height:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   3660
+      TabIndex        =   22
+      Top             =   3600
+      Width           =   795
+   End
+   Begin VB.Image Image11 
+      Height          =   240
+      Left            =   3360
+      Picture         =   "ppTabGeneral1.pgx":0291
+      Top             =   3600
+      Width           =   240
+   End
+   Begin VB.Label Label8 
+      Caption         =   "Width:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   3660
+      TabIndex        =   21
+      Top             =   3240
+      Width           =   795
+   End
+   Begin VB.Image Image8 
+      Height          =   240
+      Left            =   3360
+      Picture         =   "ppTabGeneral1.pgx":02F3
+      Top             =   3240
+      Width           =   240
+   End
+   Begin VB.Label Label5 
+      Caption         =   "Icon size:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   3300
+      TabIndex        =   20
+      Top             =   2880
+      Width           =   1935
+   End
+   Begin VB.Image Image6 
+      Height          =   240
+      Left            =   3000
+      Picture         =   "ppTabGeneral1.pgx":0355
+      Top             =   2880
+      Width           =   240
+   End
+   Begin VB.Label Label4 
+      Caption         =   "Active:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   19
+      Top             =   3600
+      Width           =   795
+   End
+   Begin VB.Image Image4 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabGeneral1.pgx":0430
+      Top             =   3600
+      Width           =   240
+   End
+   Begin VB.Label Label3 
+      Caption         =   "Normal:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996646&
+      Height          =   255
+      Left            =   840
+      TabIndex        =   18
+      Top             =   3240
+      Width           =   795
+   End
+   Begin VB.Image Image3 
+      Height          =   240
+      Left            =   540
+      Picture         =   "ppTabGeneral1.pgx":0492
+      Top             =   3240
+      Width           =   240
+   End
+   Begin VB.Image Image2 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabGeneral1.pgx":04F4
+      Top             =   2880
+      Width           =   240
+   End
+   Begin VB.Label Label2 
+      Caption         =   "Tab height:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   17
+      Top             =   2880
+      Width           =   1935
+   End
+   Begin VB.Image Image1 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabGeneral1.pgx":05CF
+      Top             =   900
+      Width           =   240
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Orientation:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   16
+      Top             =   900
+      Width           =   1815
+   End
+   Begin VB.Label Label10 
+      Caption         =   "Horizontal text align:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   15
+      Top             =   2220
+      Width           =   1935
+   End
+   Begin VB.Image Image10 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabGeneral1.pgx":06AA
+      Top             =   2220
+      Width           =   240
+   End
+   Begin VB.Label Label6 
+      Caption         =   "Vertical text align:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   3240
+      TabIndex        =   14
+      Top             =   2220
+      Width           =   2475
+   End
+   Begin VB.Image Image5 
+      Height          =   240
+      Left            =   2940
+      Picture         =   "ppTabGeneral1.pgx":0785
+      Top             =   2220
+      Width           =   240
+   End
+   Begin VB.Image Image9 
+      Height          =   240
+      Left            =   2940
+      Picture         =   "ppTabGeneral1.pgx":0860
+      Top             =   1560
+      Width           =   240
+   End
+   Begin VB.Label Label9 
+      Caption         =   "Tab style active:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   3240
+      TabIndex        =   13
+      Top             =   1560
+      Width           =   2475
+   End
+   Begin VB.Label Label7 
+      Caption         =   "Tab style normal:"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00996600&
+      Height          =   255
+      Left            =   480
+      TabIndex        =   11
+      Top             =   1560
+      Width           =   1815
+   End
+   Begin VB.Image Image7 
+      Height          =   240
+      Left            =   180
+      Picture         =   "ppTabGeneral1.pgx":093B
+      Top             =   1560
+      Width           =   240
+   End
+End
+Attribute VB_Name = "ppTabGeneral"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+
+Private mProTab As ProTabCTL
+Private mOri As ePTOrientation
+Private mStNorm As ePTStyles, mStAct As ePTStyles
+Private mTXTAlgHor As ePTHorTextAlg
+Private mTXTAlgVert As ePTVertTextAlg
+
+Private Sub cmbAlignHor_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbAlignVert_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbAppearance_Click()
+     Changed = True
+End Sub
+
+Private Sub cmbColor_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbOrientation_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbStyleActive_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbStyleNormal_Click()
+    Changed = True
+End Sub
+
+Private Sub cmbTTip_Click()
+     Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+'    freezeRedraw = False
+    mProTab.Orientation = cmbOrientation.ListIndex
+    mProTab.StyleNormal = cmbStyleNormal.ListIndex
+    mProTab.StyleActive = cmbStyleActive.ListIndex
+    mProTab.TextAlignHorizontal = cmbAlignHor.ListIndex
+    mProTab.TextAlignVertical = cmbAlignVert.ListIndex
+    mProTab.ColorScheme = cmbColor.ListIndex
+    
+    mProTab.Appearance = cmbAppearance.ListIndex
+    mProTab.ToolTipStyle = cmbTTip.ListIndex
+    '
+    mProTab.TabHeight = txtTabHeigN.Text
+    mProTab.TabHeightActive = txtTabHeigA.Text
+    '
+    mProTab.IconWidth = txtIcWid.Text
+    mProTab.IconHeight = txtIcHeig.Text
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+''''    Dim i As Integer
+    If Not mProTab Is Nothing Then Exit Sub
+    If TypeOf SelectedControls(0) Is ProTabCTL Then
+        If mProTab Is Nothing Then
+            GoTo LoadProperties
+        End If
+    End If
+    Exit Sub
+LoadProperties:
+    fillCombos
+    'freezeRedraw = True
+    Set mProTab = SelectedControls(0)
+    cmbOrientation.ListIndex = mProTab.Orientation
+    cmbStyleNormal.ListIndex = mProTab.StyleNormal
+    cmbStyleActive.ListIndex = mProTab.StyleActive
+    cmbAlignHor.ListIndex = mProTab.TextAlignHorizontal
+    cmbAlignVert.ListIndex = mProTab.TextAlignVertical
+    cmbColor.ListIndex = mProTab.ColorScheme
+    
+    cmbAppearance.ListIndex = mProTab.Appearance
+    cmbTTip.ListIndex = mProTab.ToolTipStyle
+    '
+    txtTabHeigN.Text = mProTab.TabHeight
+    txtTabHeigA.Text = mProTab.TabHeightActive
+    '
+    txtIcWid.Text = mProTab.IconWidth
+    txtIcHeig.Text = mProTab.IconHeight
+    Changed = False
+End Sub
+
+
+Private Sub fillCombos()
+    cmbOrientation.Clear
+    cmbOrientation.AddItem "ptOrientationTop"
+    cmbOrientation.AddItem "ptOrientationBottom"
+    '
+    cmbStyleNormal.Clear
+    cmbStyleNormal.AddItem "ptRectangle"
+    cmbStyleNormal.AddItem "ptRoundedRectangle"
+    cmbStyleNormal.AddItem "ptRoundedRectangle2"
+    cmbStyleNormal.AddItem "ptCornerCutLeft"
+    cmbStyleNormal.AddItem "ptCornerCutRight"
+    cmbStyleNormal.AddItem "ptCoolLeft"
+    cmbStyleNormal.AddItem "ptCoolRight"
+    cmbStyleNormal.AddItem "ptDistorted"
+    cmbStyleNormal.AddItem "ptVerticalLine"
+    cmbStyleNormal.AddItem "ptRoundMenu"
+    cmbStyleNormal.AddItem "ptDistortedMenu"
+    cmbStyleNormal.AddItem "ptXP"
+    cmbStyleNormal.AddItem "ptSSTab"
+    cmbStyleNormal.AddItem "ptFlatButton"
+    cmbStyleNormal.AddItem "ptProTab"
+    '
+    cmbStyleActive.Clear
+    cmbStyleActive.AddItem "ptRectangle"
+    cmbStyleActive.AddItem "ptRoundedRectangle"
+    cmbStyleActive.AddItem "ptRoundedRectangle2"
+    cmbStyleActive.AddItem "ptCornerCutLeft"
+    cmbStyleActive.AddItem "ptCornerCutRight"
+    cmbStyleActive.AddItem "ptCoolLeft"
+    cmbStyleActive.AddItem "ptCoolRight"
+    cmbStyleActive.AddItem "ptDistorted"
+    cmbStyleActive.AddItem "ptVerticalLine"
+    cmbStyleActive.AddItem "ptRoundMenu"
+    cmbStyleActive.AddItem "ptDistortedMenu"
+    cmbStyleActive.AddItem "ptXP"
+    cmbStyleActive.AddItem "ptSSTab"
+    cmbStyleActive.AddItem "ptFlatButton"
+    cmbStyleActive.AddItem "ptProTab"
+    '
+    cmbAlignHor.Clear
+    cmbAlignHor.AddItem "ptLeft"
+    cmbAlignHor.AddItem "ptCenter"
+    cmbAlignHor.AddItem "ptRight"
+    '
+    cmbAlignVert.Clear
+    cmbAlignVert.AddItem "ptTop"
+    cmbAlignVert.AddItem "ptMiddle"
+    cmbAlignVert.AddItem "ptBottom"
+    '
+    cmbColor.Clear
+    cmbColor.AddItem "ptColorUser"
+    cmbColor.AddItem "ptColorNoteOne"
+    
+    
+    cmbAppearance.Clear
+    cmbAppearance.AddItem "Flat"
+    cmbAppearance.AddItem "3D"
+    
+    cmbTTip.Clear
+    cmbTTip.AddItem "Standard"
+    cmbTTip.AddItem "Balloon"
+    'On Error Resume Next
+'    Dim objCTL As Control, i As Integer, z As Integer
+'    Dim cmbBox As ComboBox
+'    For Each objCTL In PropertyPage.Controls
+'        i = 0
+'        If objCTL Then
+'
+''        'MsgBox objCTL.ListCount
+'            Do While i < objCTL.ListCount
+'                i = i + 1
+'                objCTL.List(i - 1) = i - 1 & " - " & objCTL.List(i - 1)
+'            Loop
+'        End If
+'    Next 'objCTL
+    
+'    For i = 0 To PropertyPage.Controls.Count - 1
+'        If PropertyPage.Controls(i).Type = cmbBox Then
+'
+'        End If
+'    Next i
+End Sub
+
+Private Sub txtIcHeig_Change()
+    txtIcHeig.Text = Val(txtIcHeig.Text)
+    txtIcHeig.SelLength = Len(txtIcHeig.Text)
+    
+    Changed = True
+End Sub
+
+Private Sub txtIcHeig_LostFocus()
+    If Val(txtIcHeig.Text) < 4 Then
+        txtIcHeig.Text = 4
+        txtIcHeig.SelStart = 0
+        txtIcHeig.SelLength = Len(txtIcHeig.Text)
+    ElseIf Val(txtIcHeig.Text) > Val(txtTabHeigN.Text) Or Val(txtIcHeig.Text) > Val(txtTabHeigA.Text) Then
+        txtIcHeig.Text = Val(txtTabHeigN.Text)
+        txtIcHeig.SelStart = 0
+        txtIcWid.SelLength = Len(txtIcWid.Text)
+    End If
+End Sub
+
+Private Sub txtIcWid_Change()
+    txtIcWid.Text = Val(txtIcWid.Text)
+    txtIcWid.SelLength = Len(txtIcWid.Text)
+    
+    Changed = True
+End Sub
+
+Private Sub txtIcWid_LostFocus()
+    If Val(txtIcWid.Text) < 4 Then
+        txtIcWid.Text = 4
+        txtIcWid.SelStart = 0
+        txtIcWid.SelLength = Len(txtIcWid.Text)
+'    ElseIf Val(txtIcWid.Text) > Val(txtTabHeigN.Text) Or Val(txtIcWid.Text) > Val(txtTabHeigA.Text) Then
+'        txtIcWid.Text = Val(txtTabHeigN.Text)
+'        txtIcWid.SelStart = 0
+'        txtIcWid.SelLength = Len(txtIcWid.Text)
+    End If
+End Sub
+
+Private Sub txtTabHeigA_Change()
+    txtTabHeigA.Text = Val(txtTabHeigA.Text)
+    txtTabHeigA.SelLength = Len(txtTabHeigA.Text)
+    
+    Changed = True
+End Sub
+
+Private Sub txtTabHeigA_LostFocus()
+    If Val(txtTabHeigA.Text) < 15 Then
+        txtTabHeigA.Text = 15
+        txtTabHeigA.SelStart = 0
+        txtTabHeigA.SelLength = Len(txtTabHeigA.Text)
+    End If
+End Sub
+
+Private Sub txtTabHeigN_Change()
+    txtTabHeigN.Text = Val(txtTabHeigN.Text)
+    txtTabHeigN.SelLength = Len(txtTabHeigN.Text)
+    
+    Changed = True
+End Sub
+
+Private Sub txtTabHeigN_LostFocus()
+    If Val(txtTabHeigN.Text) < 15 Then
+        txtTabHeigN.Text = 15
+        txtTabHeigN.SelStart = 0
+        txtTabHeigN.SelLength = Len(txtTabHeigN.Text)
+    End If
+End Sub
